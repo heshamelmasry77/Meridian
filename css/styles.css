@@ -167,7 +167,7 @@ a:hover {
         width: 75%;
     }
 
-    .navbar__hamburger-icon, .mobile-nav {
+    .navbar__hamburger-icon, .mobile-nav, .mobile-nav__overlay {
         display: none;
     }
 }
