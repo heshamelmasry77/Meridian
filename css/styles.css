@@ -62,20 +62,22 @@ a:hover {
 
 /* Mobile Navigation Block */
 .mobile-nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -70%; /* Initially hidden off-screen on the right */
+    height: 100vh;
+    width: 70%;
     background-color: #ffffff;
     color: #000;
-    width: 100%;
     z-index: 50;
+    transition: transform 0.3s ease-in-out; /* Smooth slide animation */
+    transform: translateX(100%); /* Fully hidden */
 }
 
 .mobile-nav--active {
+    transform: translateX(-100%); /* Slide into view */
     height: 100vh;
     position: fixed;
-    margin-left: 30%;
-    width: 70%;
-    display: block;
-    top: 0;
 }
 
 .mobile-nav__menu-icon {
@@ -134,13 +136,17 @@ a:hover {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 26, .5);
+    background-color: rgba(0, 0, 26, 0.5);
     z-index: 40;
     top: 0;
+    left: 0;
+    opacity: 0; /* Start transparent */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade animation */
 }
 
 .mobile-nav--active + .mobile-nav__overlay {
     display: block;
+    opacity: 1;
 }
 
 /* Media Queries */
