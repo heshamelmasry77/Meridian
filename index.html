@@ -7,12 +7,22 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<header>
+<header class="container">
     <div class="navbar">
         <div class="navbar__logo">
             <img src="assets/images/logo.svg" alt="Meridian News Logo">
         </div>
         <img src="assets/images/burger-icon.svg" alt="Hamburger Icon" class="navbar__hamburger-icon">
+        <!--Desktop Nav-->
+        <div class="navbar__desktop">
+            <ul class="navbar__menu">
+                <li class="nav__menu-item"><a href="#">Home</a></li>
+                <li class="nav__menu-item"><a href="#">New</a></li>
+                <li class="nav__menu-item"><a href="#">Popular</a></li>
+                <li class="nav__menu-item"><a href="#">Trending</a></li>
+                <li class="nav__menu-item"><a href="#">Categories</a></li>
+            </ul>
+        </div>
     </div>
 
     <div class="mobile-nav">
@@ -20,11 +30,11 @@
             <img src="assets/images/close-icon.svg" alt="Close Icon" class="mobile-nav__close-icon">
         </div>
         <ul class="mobile-nav__menu">
-            <li class="mobile-nav__menu-item"><a href="#">Home</a></li>
-            <li class="mobile-nav__menu-item"><a href="#">New</a></li>
-            <li class="mobile-nav__menu-item"><a href="#">Popular</a></li>
-            <li class="mobile-nav__menu-item"><a href="#">Trending</a></li>
-            <li class="mobile-nav__menu-item"><a href="#">Categories</a></li>
+            <li class="nav__menu-item"><a href="#">Home</a></li>
+            <li class="nav__menu-item"><a href="#">New</a></li>
+            <li class="nav__menu-item"><a href="#">Popular</a></li>
+            <li class="nav__menu-item"><a href="#">Trending</a></li>
+            <li class="nav__menu-item"><a href="#">Categories</a></li>
         </ul>
     </div>
 
@@ -32,25 +42,18 @@
 </header>
 
 <main>
-    <!-- Main Content -->
-    Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee tulaliloo
-    pepete belloo! Wiiiii. Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass baboiii. Belloo! hahaha
-    baboiii poopayee hahaha belloo! La bodaaa bee do bee do bee do chasy. Pepete poopayee tank yuuu! Butt la bodaaa
-    wiiiii aaaaaah ti aamoo! Poulet tikka masala. Tatata bala tu daa ti aamoo! Poulet tikka masala poopayee wiiiii
-    bappleees hana dul sae ti aamoo! Jeje belloo!
+    <div class="container hero-banner">
+        <div class="hero-banner__heading">
+            <h1 class="hero-banner__title">Property insights in Norway</h1>
+            <p class="hero-banner__description">
+                We dive into the next evolution of the web that claims to put the power of the platforms back into the
+                hands of the people. But is it really fulfilling its promise?
+            </p>
+        </div>
+        <div class="hero-banner__image"></div>
+    </div>
 
 </main>
-
-<footer>
-    <!-- Footer Content -->
-    Minions ipsum poulet tikka masala me want bananaaa! Underweaaar jiji tulaliloo potatoooo poulet tikka masala belloo!
-    Gelatooo. Bappleees underweaaar daa poopayee hahaha jeje hahaha underweaaar bee do bee do bee do po kass la bodaaa.
-    Butt jeje chasy po kass underweaaar tatata bala tu jeje butt baboiii bappleees. Tank yuuu! tank yuuu! Hana dul sae
-    poopayee po kass uuuhhh jiji. Gelatooo bananaaaa underweaaar daa potatoooo wiiiii me want bananaaa! La bodaaa poulet
-    tikka masala. Ti aamoo! pepete po kass bee do bee do bee do ti aamoo! Para tú la bodaaa bappleees tatata bala tu
-    para tú la bodaaa. Hana dul sae tulaliloo hahaha belloo! Tank yuuu! Wiiiii potatoooo chasy jeje po kass potatoooo.
-
-</footer>
 <script src="js/navbar.js"></script>
 </body>
 </html>

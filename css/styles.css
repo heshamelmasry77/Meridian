@@ -3,6 +3,7 @@
     --primary-color: #0056b3;
     --secondary-color: #f0ad4e;
     --dark-space-blue: #00001A;
+    --gunmetal: #5E607A;
 }
 
 /* Universal Box Sizing */
@@ -46,9 +47,10 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 28px 16px;
+    padding: 28px 0;
     background-color: #fff;
     z-index: 30;
+    position: relative;
 }
 
 .navbar__logo img {
@@ -99,7 +101,7 @@ a:hover {
     display: block;
 }
 
-.mobile-nav__menu-item a {
+.nav__menu-item a {
     padding: 16px 24px;
     color: var(--dark-space-blue);
     text-decoration: none;
@@ -148,6 +150,42 @@ a:hover {
     opacity: 1;
 }
 
+/*Navbar Desktop*/
+.navbar__desktop {
+    display: none;
+}
+
+/* Hero Banner Block */
+.hero-banner {
+    /* Container styling */
+}
+
+.hero-banner__heading {
+    /* Styling for the heading container */
+}
+
+.hero-banner__title {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--dark-space-blue);
+    margin-bottom: 16px;
+    line-height: 40px;
+}
+
+.hero-banner__description {
+    font-size: 15px;
+    color: var(--gunmetal);
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.hero-banner__image {
+    background-image: url('../assets/images/hero-banner-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
 /* Media Queries */
 @media (min-width: 576px) {
     .container {
@@ -168,6 +206,29 @@ a:hover {
 
     .navbar__hamburger-icon, .mobile-nav, .mobile-nav__overlay {
         display: none !important;
+    }
+
+    .navbar__desktop {
+        display: block;
+    }
+
+    .navbar__menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav__menu-item a {
+        padding: 16px 20px;
+        font-weight: 400;
+        font-size: 15px;
+        color: var(--gunmetal);
+    }
+
+    .hero-banner__image {
+        background-image: url('../assets/images/hero-banner-desktop.jpg');
     }
 }
 
