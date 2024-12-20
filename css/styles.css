@@ -1,0 +1,63 @@
+/* Base styles and color variables */
+:root {
+    --primary-color: #0056b3; /* A deep blue - primary color */
+    --secondary-color: #f0ad4e; /* A warm orange - secondary color */
+}
+
+/* Universal Box Sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Universal styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile-first styles: This applies to all devices by default and adjusts for larger screens */
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 576px) { /* Small devices (landscape phones, 576px and up) */
+    .container {
+        width: 85%;
+    }
+}
+
+@media (min-width: 768px) { /* Medium devices (tablets, 768px and up) */
+    .container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 992px) { /* Large devices (desktops, 992px and up) */
+    .container {
+        width: 75%;
+    }
+}
+
+@media (min-width: 1200px) { /* Extra large devices (large desktops, 1200px and up) */
+    .container {
+        width: 70%;
+    }
+}
