@@ -1,0 +1,72 @@
+{
+  "Oslo": {
+    "Change last month": -0.7,
+    "Change seasonally adjusted last month": 0.3,
+    "Change year to date": "6.1 %",
+    "Change last year": 5,
+    "Change last 5 years": 26.6,
+    "Change last 10 years": 81.6,
+    "Average price per sqm": "95 066",
+    "Average price": "6 956 030"
+  },
+  "Bergen": {
+    "Change last month": -0.4,
+    "Change seasonally adjusted last month": 0.7,
+    "Change year to date": "11.2 %",
+    "Change last year": 8.7,
+    "Change last 5 years": 27.3,
+    "Change last 10 years": 42.4,
+    "Average price per sqm": "54 629",
+    "Average price": "4 588 084"
+  },
+  "Trondheim": {
+    "Change last month": -0.2,
+    "Change seasonally adjusted last month": 0.8,
+    "Change year to date": "5.2 %",
+    "Change last year": 1.3,
+    "Change last 5 years": 20,
+    "Change last 10 years": 39.2,
+    "Average price per sqm": "53 670",
+    "Average price": "4 531 763"
+  },
+  "Stavanger m/omegn": {
+    "Change last month": 1.2,
+    "Change seasonally adjusted last month": 1.6,
+    "Change year to date": "13.2 %",
+    "Change last year": 8.8,
+    "Change last 5 years": 33.3,
+    "Change last 10 years": 21.1,
+    "Average price per sqm": "47 323",
+    "Average price": "4 876 680"
+  },
+  "Kristiansand m/omegn": {
+    "Change last month": -0.3,
+    "Change seasonally adjusted last month": 0.8,
+    "Change year to date": "9.8 %",
+    "Change last year": 6.5,
+    "Change last 5 years": 36.4,
+    "Change last 10 years": 49.3,
+    "Average price per sqm": "40 802",
+    "Average price": "4 336 181"
+  },
+  "Tromsø": {
+    "Change last month": -0.3,
+    "Change seasonally adjusted last month": 0.7,
+    "Change year to date": "8.4 %",
+    "Change last year": 3,
+    "Change last 5 years": 15.2,
+    "Change last 10 years": 39.4,
+    "Average price per sqm": "56 118",
+    "Average price": "4 646 623"
+  },
+  "Norway": {
+    "Change last month": -0.6,
+    "Change seasonally adjusted last month": 0.4,
+    "Change year to date": "7.6 %",
+    "Change last year": 4.1,
+    "Change last 5 years": 24.8,
+    "Change last 10 years": 56.6,
+    "Average price per sqm": "53 776",
+    "Average price": "4 795 936"
+  }
+}

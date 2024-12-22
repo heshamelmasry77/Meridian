@@ -3,6 +3,10 @@
     --primary-color: #0056b3;
     --secondary-color: #f0ad4e;
     --dark-space-blue: #00001A;
+    --gunmetal: #5E607A;
+    --yellow: #E9AA52;
+    --almost-white: #FFFDFA;
+    --silver: #C5C6CE;
 }
 
 /* Universal Box Sizing */
@@ -46,9 +50,10 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 28px 16px;
+    padding: 28px 0;
     background-color: #fff;
     z-index: 30;
+    position: relative;
 }
 
 .navbar__logo img {
@@ -99,7 +104,7 @@ a:hover {
     display: block;
 }
 
-.mobile-nav__menu-item a {
+.nav__menu-item a {
     padding: 16px 24px;
     color: var(--dark-space-blue);
     text-decoration: none;
@@ -148,6 +153,112 @@ a:hover {
     opacity: 1;
 }
 
+/*Navbar Desktop*/
+.navbar__desktop {
+    display: none;
+}
+
+/*HERO AND NEWS BLOCKS*/
+.hero-and-news {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+/* Block: property-insights */
+.property-insights {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+/* Element: property-insights__banner */
+.property-insights__banner {
+    /* Container styling for the banner */
+}
+
+/* Element: property-insights__image */
+.property-insights__image {
+    background-image: url('../assets/images/hero-banner-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+/* Element: property-insights__content */
+.property-insights__content {
+    /* Styling for the content container */
+}
+
+/* Element: property-insights__title */
+.property-insights__title {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--dark-space-blue);
+    margin-bottom: 16px;
+    line-height: 40px;
+    margin-top: 0;
+}
+
+/* Element: property-insights__description */
+.property-insights__description {
+    font-size: 15px;
+    color: var(--gunmetal);
+    line-height: 26px;
+    font-weight: 400;
+}
+
+/* NEWS Block */
+.news {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-space-blue);
+    padding: 24px;
+}
+
+.news__title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    color: var(--yellow);
+    margin: 0 0 30px;
+}
+
+.news__list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.news__item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 28px;
+}
+
+.news__item:not(:last-child) {
+    border-bottom: 1px solid var(--gunmetal); /* Add border to all except the last */
+}
+
+.news__item-title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px;
+    color: var(--almost-white);
+    margin: 0 0 8px;
+}
+
+.news__item-description {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    color: var(--silver);
+    margin: 0;
+}
+
 /* Media Queries */
 @media (min-width: 576px) {
     .container {
@@ -168,6 +279,40 @@ a:hover {
 
     .navbar__hamburger-icon, .mobile-nav, .mobile-nav__overlay {
         display: none !important;
+    }
+
+    .navbar__desktop {
+        display: block;
+    }
+
+    .navbar__menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav__menu-item a {
+        padding: 16px 20px;
+        font-weight: 400;
+        font-size: 15px;
+        color: var(--gunmetal);
+    }
+
+    .hero-and-news {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .property-insights {
+        gap: 30px;
+        width: 700px;
+        flex-shrink: 0;
+    }
+
+    .property-insights__image {
+        background-image: url('../assets/images/hero-banner-desktop.jpg');
     }
 }
 
