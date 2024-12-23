@@ -16,6 +16,8 @@
 
 html, body {
     height: 100%;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
 }
 
 body {
