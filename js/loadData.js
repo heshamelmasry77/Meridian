@@ -46,7 +46,7 @@ function appendNorway(norwayData, container) {
     const norwayElement = document.createElement('div');
     norwayElement.className = 'property-insights__content';
     norwayElement.innerHTML = `
-        <h1 class="property-insights__title">Property insights in Norway <span>→</span></h1>
+        <a href="details.html?city=norway"><h1 class="property-insights__title">Property insights in Norway <span>→</span></h1></a>
         <p class="property-insights__description">
             Norway’s real estate market has always been a fascinating mix of modern design and natural beauty.
             From urban apartments nestled in bustling city centers to serene countryside homes surrounded by fjords and forests,
