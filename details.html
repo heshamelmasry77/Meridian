@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>:: Meridian News Website - City Insights Details :: </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar__logo">
+                <img src="assets/images/logo.svg" alt="Meridian News Logo">
+            </div>
+            <img src="assets/images/burger-icon.svg" alt="Hamburger Icon" class="navbar__hamburger-icon">
+            <!--Desktop Nav-->
+            <div class="navbar__desktop">
+                <ul class="navbar__menu">
+                    <li class="nav__menu-item"><a href="#">Home</a></li>
+                    <li class="nav__menu-item"><a href="#">New</a></li>
+                    <li class="nav__menu-item"><a href="#">Popular</a></li>
+                    <li class="nav__menu-item"><a href="#">Trending</a></li>
+                    <li class="nav__menu-item"><a href="#">Categories</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mobile-nav">
+            <div class="mobile-nav__menu-icon">
+                <img src="assets/images/close-icon.svg" alt="Close Icon" class="mobile-nav__close-icon">
+            </div>
+            <ul class="mobile-nav__menu">
+                <li class="nav__menu-item"><a href="#">Home</a></li>
+                <li class="nav__menu-item"><a href="#">New</a></li>
+                <li class="nav__menu-item"><a href="#">Popular</a></li>
+                <li class="nav__menu-item"><a href="#">Trending</a></li>
+                <li class="nav__menu-item"><a href="#">Categories</a></li>
+            </ul>
+        </div>
+
+        <div class="mobile-nav__overlay"></div>
+    </div>
+</header>
+<div class="container" id="details-container"></div>
+<script src="js/details.js"></script>
+</body>
+</html>
