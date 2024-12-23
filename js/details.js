@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     const params = new URLSearchParams(window.location.search);
     const cityKey = params.get('city');  // This comes correctly sanitized
-    console.log('City key:', cityKey);
 
     fetch('data/insights.json')
         .then(response => response.json())
         .then(originalData => {
-            console.log('Original City data:', originalData);
             // Create a new object with sanitized keys
             const sanitizedData = {};
             Object.keys(originalData).forEach(key => {
