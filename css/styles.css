@@ -391,6 +391,7 @@ a:hover {
 .cities-insights__image {
     height: 100%;
     object-fit: cover; /* Ensures the image covers the container without distorting */
+    width: 100%;
 }
 
 .cities-insights__overlay {
@@ -444,11 +445,27 @@ a:hover {
     min-width: 300px; /* Minimum width for items */
 }
 
+.city-details__image {
+    object-fit: contain;
+    height: 324px;
+    width: 100%;
+    object-position: left;
+}
+
 .city-details__detail:nth-child(odd) {
     background: #f1efef; /* Alternate background color for contrast */
 }
+
 .city-details__detail:nth-child(even) {
     background: #dedede; /* Alternate background color for contrast */
+}
+
+.city-details__back-link {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 /* Label styling */

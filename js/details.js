@@ -35,7 +35,11 @@ function displayCityDetails(cityData, container, cityName) {
     if (cityData) {
         container.innerHTML = `
             <div class="city-details__container">
+                <div>
+                    <a href="index.html" class="city-details__back-link">← Back to insights</a>
+                </div>
                 <h1 class="city-details__title">Details for ${cityName || 'the city'}</h1>
+                
                 <img src="assets/images/cities/${cityName}.jpg" alt="${cityData.name || 'City'}" class="city-details__image">
                 ${generateCityDetailRow('Change Last Month', cityData['Change last month'], '%')}
                 ${generateCityDetailRow('Change Seasonally Adjusted Last Month', cityData['Change seasonally adjusted last month'], '%')}
