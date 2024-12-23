@@ -27,8 +27,21 @@ body {
     line-height: 1.6;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--silver);
+    margin: 1em 0;
 }
 
 a {
@@ -219,6 +232,8 @@ a:hover {
 
 /* NEWS Block */
 .news {
+    height: 526px;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     background-color: var(--dark-space-blue);
@@ -397,6 +412,88 @@ a:hover {
 .cities-insights__image-container:hover .cities-insights__overlay {
     opacity: 1; /* Make overlay visible on hover */
 }
+
+/* Container for the entire city details section */
+.city-details__container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    gap: 20px; /* Space between rows and columns */
+    padding: 20px;
+}
+
+/* Title styling */
+.city-details__title {
+    flex-basis: 100%; /* Full width for the title */
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--dark-space-blue); /* Dark blue for contrast */
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+/* Individual detail rows */
+.city-details__detail {
+    flex: 1 1 calc(50% - 20px); /* Two columns with a gap */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white; /* Card background */
+    padding: 15px;
+    min-width: 300px; /* Minimum width for items */
+}
+
+.city-details__detail:nth-child(odd) {
+    background: #f1efef; /* Alternate background color for contrast */
+}
+.city-details__detail:nth-child(even) {
+    background: #dedede; /* Alternate background color for contrast */
+}
+
+/* Label styling */
+.city-details__label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555; /* Dark grey for contrast */
+    flex: 1; /* Allow label to take up space */
+    text-decoration: underline;
+}
+
+/* Value styling */
+.city-details__value {
+    font-size: 16px;
+    font-weight: 600;
+    color: darkgreen;
+    text-align: right;
+}
+
+.city-details__value--negative {
+    color: #ff4d4f; /* Red for negative values */
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Error message */
+.city-details__error {
+    flex-basis: 100%; /* Full width for error message */
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff0000; /* Red for error messages */
+    text-align: center;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .city-details__detail {
+        flex: 1 1 100%; /* Full width for smaller screens */
+    }
+
+    .city-details__container {
+        gap: 15px; /* Reduce gap for smaller screens */
+    }
+}
+
 
 /* Media Queries */
 @media (min-width: 576px) {

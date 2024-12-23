@@ -10,15 +10,30 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<header class="container">
-    <div class="navbar">
-        <div class="navbar__logo">
-            <img src="assets/images/logo.svg" alt="Meridian News Logo">
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar__logo">
+                <img src="assets/images/logo.svg" alt="Meridian News Logo">
+            </div>
+            <img src="assets/images/burger-icon.svg" alt="Hamburger Icon" class="navbar__hamburger-icon">
+            <!--Desktop Nav-->
+            <div class="navbar__desktop">
+                <ul class="navbar__menu">
+                    <li class="nav__menu-item"><a href="#">Home</a></li>
+                    <li class="nav__menu-item"><a href="#">New</a></li>
+                    <li class="nav__menu-item"><a href="#">Popular</a></li>
+                    <li class="nav__menu-item"><a href="#">Trending</a></li>
+                    <li class="nav__menu-item"><a href="#">Categories</a></li>
+                </ul>
+            </div>
         </div>
-        <img src="assets/images/burger-icon.svg" alt="Hamburger Icon" class="navbar__hamburger-icon">
-        <!--Desktop Nav-->
-        <div class="navbar__desktop">
-            <ul class="navbar__menu">
+
+        <div class="mobile-nav">
+            <div class="mobile-nav__menu-icon">
+                <img src="assets/images/close-icon.svg" alt="Close Icon" class="mobile-nav__close-icon">
+            </div>
+            <ul class="mobile-nav__menu">
                 <li class="nav__menu-item"><a href="#">Home</a></li>
                 <li class="nav__menu-item"><a href="#">New</a></li>
                 <li class="nav__menu-item"><a href="#">Popular</a></li>
@@ -26,22 +41,9 @@
                 <li class="nav__menu-item"><a href="#">Categories</a></li>
             </ul>
         </div>
-    </div>
 
-    <div class="mobile-nav">
-        <div class="mobile-nav__menu-icon">
-            <img src="assets/images/close-icon.svg" alt="Close Icon" class="mobile-nav__close-icon">
-        </div>
-        <ul class="mobile-nav__menu">
-            <li class="nav__menu-item"><a href="#">Home</a></li>
-            <li class="nav__menu-item"><a href="#">New</a></li>
-            <li class="nav__menu-item"><a href="#">Popular</a></li>
-            <li class="nav__menu-item"><a href="#">Trending</a></li>
-            <li class="nav__menu-item"><a href="#">Categories</a></li>
-        </ul>
+        <div class="mobile-nav__overlay"></div>
     </div>
-
-    <div class="mobile-nav__overlay"></div>
 </header>
 
 <main>
@@ -85,6 +87,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container">
+        <hr/>
     </div>
 
     <div class="container cities-insights" id="cities-container">
