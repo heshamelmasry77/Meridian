@@ -286,7 +286,6 @@ a:hover {
 /* Element: cities-insights__item */
 .cities-insights__item {
     width: 100%;
-    flex-grow: 1;
 }
 
 .cities-insights__item a {
@@ -375,7 +374,6 @@ a:hover {
 }
 
 .cities-insights__image {
-    width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures the image covers the container without distorting */
 }
