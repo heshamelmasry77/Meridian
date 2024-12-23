@@ -19,9 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const listContainer = document.createElement('div');
             listContainer.className = 'cities-insights__list';
 
-            // Check and append Norway first if it exists in the data
+            // handle Norway separately or not at all
             if (data.hasOwnProperty('Norway')) {
-                appendCityElement(data, 'Norway', listContainer, true, 0); // Norway as the first item
+                const nationalInsights = document.getElementById('national-insights');
+                appendNorway(data['Norway'], nationalInsights);
             }
 
             // Get all city names as an array excluding 'Norway'
@@ -30,9 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Use a standard for loop to iterate through the cities
             for (let i = 0; i < cities.length; i++) {
                 const city = cities[i];
-                if (data.hasOwnProperty(city)) {
-                    appendCityElement(data, city, listContainer, false, i + 1); // Pass index + 1 since Norway takes position 0
-                }
+                appendCityElement(data, city, listContainer, false, i); // Adjust index based on your preference
             }
 
             container.appendChild(listContainer);
@@ -40,6 +39,28 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => console.error('Failed to load city data:', error));
 });
 
+function appendNorway(norwayData, container) {
+    const formattedAveragePrice = formatPrice(norwayData['Average price']);
+    const formattedPricePerSqm = formatPrice(norwayData['Average price per sqm']);
+
+    const norwayElement = document.createElement('div');
+    norwayElement.className = 'property-insights__content';
+    norwayElement.innerHTML = `
+        <h1 class="property-insights__title">Property insights in Norway <span>→</span></h1>
+        <p class="property-insights__description">
+            Norway’s real estate market has always been a fascinating mix of modern design and natural beauty.
+            From urban apartments nestled in bustling city centers to serene countryside homes surrounded by fjords and forests,
+            Norway offers something for everyone. But how does the country's property market adapt to the rising demand for sustainability
+            and energy-efficient homes?
+        </p>
+        <p class="property-insights__stats">
+            Average price: <span>${formattedAveragePrice} NOK</span><br>
+            Average price per sqm: <span>${formattedPricePerSqm} NOK</span>
+        </p>
+    `;
+
+    container.prepend(norwayElement); // Prepend to make it appear first
+}
 function appendCityElement(data, city, container, isNational, index) {
     const cityData = data[city];
     const sanitizedCity = sanitizeCityName(city);
@@ -55,7 +76,7 @@ function appendCityElement(data, city, container, isNational, index) {
     cityElement.innerHTML = `
         <a href="details.html?city=${encodeURIComponent(sanitizedCity)}">
             <h3 class="cities-insights__title">
-                <span class="cities-insights__icon">${index + 1}</span> ${city}  <!-- Display index + 1 -->
+                <span class="cities-insights__icon">${index + 1}</span> ${city}
             </h3>
              <div class="cities-insights__image-container">
                 <img src="assets/images/cities/${sanitizedCity}.jpg" class="cities-insights__image" alt="Photo in ${city}" />
@@ -67,10 +88,10 @@ function appendCityElement(data, city, container, isNational, index) {
                 View More <span class="cities-insights__arrow">→</span>
             </h4>
             <p class="cities-insights__description">
-                Average price: <span>${formattedAveragePrice} NOK </span>
+                Average price: <span>${formattedAveragePrice} NOK</span>
             </p>
             <p class="cities-insights__description">
-                Average price per sqm: <span>${formattedPricePerSqm} NOK  </span>
+                Average price per sqm: <span>${formattedPricePerSqm} NOK</span>
             </p>
         </a>
     `;
