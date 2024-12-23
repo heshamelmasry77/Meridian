@@ -57,7 +57,12 @@ function appendCityElement(data, city, container, isNational, index) {
             <h3 class="cities-insights__title">
                 <span class="cities-insights__icon">${index + 1}</span> ${city}  <!-- Display index + 1 -->
             </h3>
-            <img src="assets/images/cities/${sanitizedCity}.jpg" class="cities-insights__image" alt="Photo in ${city}" />
+             <div class="cities-insights__image-container">
+                <img src="assets/images/cities/${sanitizedCity}.jpg" class="cities-insights__image" alt="Photo in ${city}" />
+                <div class="cities-insights__overlay">
+                    <span>${city}</span>
+                </div>
+            </div>
             <h4 class="cities-insights__price">
                 View More <span class="cities-insights__arrow">→</span>
             </h4>
