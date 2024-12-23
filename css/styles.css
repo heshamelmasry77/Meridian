@@ -31,12 +31,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: var(--secondary-color);
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Container Block */
@@ -214,6 +213,8 @@ a:hover {
     flex-direction: column;
     background-color: var(--dark-space-blue);
     padding: 24px;
+    margin-bottom: 64px;
+    flex-grow: 1;
 }
 
 .news__title {
@@ -257,6 +258,101 @@ a:hover {
     line-height: 26px;
     color: var(--silver);
     margin: 0;
+}
+
+/* CITIES INSIGHTS BLOCK */
+/* Block: cities-insights */
+.cities-insights {
+    /* Container for the entire section */
+}
+
+/* Element: cities-insights__list */
+.cities-insights__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Element: cities-insights__item */
+.cities-insights__item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.national-overview {
+    width: 100%;
+}
+
+.national-overview img {
+    height: 324px;
+    object-position: 0 72%;
+}
+/* Element: cities-insights__icon */
+.cities-insights__icon {
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--gunmetal);
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 10px;
+    text-align: center;
+}
+
+/* Element: cities-insights__title */
+.cities-insights__title {
+    font-size: 16px;
+    color: var(--gunmetal);
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Element: cities-insights__image */
+.cities-insights__image {
+    object-fit: cover;
+    height: 248px;
+    width: 100%;
+}
+
+.cities-insights__prices {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Element: cities-insights__price */
+.cities-insights__price {
+    font-size: 20px;
+    color: var(--dark-space-blue);
+    font-weight: 400;
+    margin: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.cities-insights__price:hover {
+    text-decoration: underline;
+}
+
+.cities-insights__arrow {
+    display: none;
+}
+
+.cities-insights__price:hover .cities-insights__arrow {
+    display: inline-block;
+    text-decoration: underline;
+}
+
+/* Element: cities-insights__description */
+.cities-insights__description {
+    font-size: 14px;
+    color: var(--gunmetal);
+    font-weight: 600;
+    margin: 0;
+}
+.cities-insights__description span {
+    color: darkgreen;
 }
 
 /* Media Queries */
@@ -313,6 +409,20 @@ a:hover {
 
     .property-insights__image {
         background-image: url('../assets/images/hero-banner-desktop.jpg');
+    }
+
+    .cities-insights__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .cities-insights__item {
+        width: 20%;
+    }
+
+    .national-overview {
+        width: 100%;
     }
 }
 
