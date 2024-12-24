@@ -1,14 +1,4 @@
-function sanitizeCityName(cityName) {
-    // Remove special characters, replace spaces with hyphens, and convert to lowercase
-    return cityName.replace(/[^a-zA-Z0-9 -]/g, '') // Remove special characters
-        .replace(/\s+/g, '-') // Replace spaces with hyphens
-        .toLowerCase(); // Convert to lowercase
-}
-function formatPrice(price) {
-    // Remove any non-digit characters except decimal points
-    let numericPrice = price.replace(/[^\d.-]/g, '');
-    return parseFloat(numericPrice).toLocaleString('en-US');
-}
+import { sanitizeCityName, formatPrice } from './utils.js';
 document.addEventListener('DOMContentLoaded', function() {
     fetch('data/insights.json')
         .then(response => response.json())

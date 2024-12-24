@@ -1,0 +1,28 @@
+/* Base styles and color variables */
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #f0ad4e;
+    --dark-space-blue: #00001A;
+    --gunmetal: #5E607A;
+    --yellow: #E9AA52;
+    --almost-white: #FFFDFA;
+    --silver: #C5C6CE;
+}
+
+/* Universal Box Sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    margin: 0;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
