@@ -14,23 +14,31 @@ Welcome to the **Meridian News Website**! This site brings you the latest news w
 ```
 Meridian/
 │
-├── index.html           # Main entry point of the site
-├── about.html           # About page
-├── contact.html         # Contact page
+├── index.html             # Main entry point of the site
+├── details.html           # City Details Page
 │
-├── css/                 # Folder for CSS files
-│   ├── styles.css       # Main stylesheet
+├── css/                   # Folder for CSS files
+│   ├── base.css           # Base styles and color variables
+│   ├── cities-insights.css# Styles for the Cities Insights section
+│   ├── city-details.css   # Styles for the City Details page
+│   ├── hero-and-news.css  # Styles for the Hero and News sections
+│   ├── layout.css         # General layout styles
+│   ├── media-queries.css  # Responsive design styles
+│   ├── navbar.css         # Styles for the navigation bar
+│   ├── news.css           # Styles for the News section
+│   ├── property-insights.css # Styles for the Property Insights section
 │
-├── js/                  # Folder for JavaScript files
-│   ├── main.js          # Main JavaScript functions
-│   ├── newsHandler.js   # Manages loading and displaying news
+├── js/                    # Folder for JavaScript files
+│   ├── details.js         # Handles dynamic content for the City Details page
+│   ├── loadData.js        # Fetches and displays insights data
+│   ├── navbar.js          # Handles navigation bar functionality
+│   ├── utils.js           # Utility functions for shared logic
 │
-├── data/                # Contains JSON data files
-│   ├── news.json        # Mocked news data
+├── data/                  # Contains JSON data files
+│   ├── insights.json      # Mocked insights data
 │
-└── assets/              # Static files like images and fonts
-    ├── images/          # Images used across the site
-    ├── fonts/           # Custom fonts
+└── assets/                # Static files like images and fonts
+    ├── images/            # Images used across the site
 ```
 
 ## :rocket: Getting Started
@@ -45,7 +53,7 @@ To get a local copy up and running, follow these simple steps:
 
 ## :wrench: Usage
 
-Simply navigate through the pages using the links provided on the website. The news content is loaded dynamically from the `news.json` file using JavaScript, which fetches and displays the news items.
+Simply navigate through the pages using the links provided on the website. The content is dynamically loaded from the `insights.json` file using JavaScript, and pages are styled with modular CSS files for better maintainability.
 
 ## :busts_in_silhouette: Contributing
 
