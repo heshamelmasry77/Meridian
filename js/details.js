@@ -1,3 +1,5 @@
+import { sanitizeCityName, formatPrice } from './utils.js';
+
 document.addEventListener('DOMContentLoaded', function () {
     const params = new URLSearchParams(window.location.search);
     const cityKey = params.get('city');  // This comes correctly sanitized
@@ -17,19 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => console.error('Error loading city data:', error));
 });
-
-function sanitizeCityName(cityName) {
-    // Remove special characters, replace spaces with hyphens, and convert to lowercase
-    return cityName.replace(/[^a-zA-Z0-9 -]/g, '')
-        .replace(/\s+/g, '-')
-        .toLowerCase(); // Sanitize function to format city names
-}
-
-function formatPrice(price) {
-    // Remove any non-digit characters except decimal points
-    let numericPrice = price.replace(/[^\d.-]/g, '');
-    return parseFloat(numericPrice).toLocaleString('en-US');
-}
 
 function displayCityDetails(cityData, container, cityName) {
     if (cityData) {

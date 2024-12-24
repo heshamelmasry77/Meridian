@@ -1,0 +1,84 @@
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .city-details__detail {
+        flex: 1 1 100%; /* Full width for smaller screens */
+    }
+
+    .city-details__container {
+        gap: 15px; /* Reduce gap for smaller screens */
+    }
+}
+
+
+/* Media Queries */
+@media (min-width: 576px) {
+    .container {
+        width: 85%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 75%;
+    }
+
+    .navbar__hamburger-icon, .mobile-nav, .mobile-nav__overlay {
+        display: none !important;
+    }
+
+    .navbar__desktop {
+        display: block;
+    }
+
+    .navbar__menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav__menu-item a {
+        padding: 16px 20px;
+        font-weight: 400;
+        font-size: 15px;
+        color: var(--gunmetal);
+    }
+
+    .hero-and-news {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .property-insights {
+        gap: 30px;
+        width: 700px;
+        flex-shrink: 0;
+    }
+
+    .property-insights__image {
+        background-image: url('../assets/images/hero-banner-desktop.jpg');
+    }
+
+    .cities-insights__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .cities-insights__item {
+        width: 20%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 70%;
+    }
+}

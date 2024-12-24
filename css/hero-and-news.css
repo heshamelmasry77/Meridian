@@ -1,0 +1,6 @@
+/*HERO AND NEWS BLOCKS*/
+.hero-and-news {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
