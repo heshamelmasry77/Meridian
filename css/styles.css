@@ -8,7 +8,7 @@
 .cities-insights__list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 26px;
 }
 
 /* Element: cities-insights__item */
@@ -96,7 +96,6 @@
 
 .cities-insights__image-container {
     position: relative;
-    width: 70%;
     height: 248px;
     overflow: hidden; /* Ensures the overlay doesn't extend outside the image */
 }
@@ -121,6 +120,10 @@
     font-size: 20px; /* Large font size for visibility */
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s ease; /* Smooth transition for the overlay */
+}
+
+.cities-insights__overlay span {
+    text-align: center;
 }
 
 .cities-insights__image-container:hover .cities-insights__overlay {
