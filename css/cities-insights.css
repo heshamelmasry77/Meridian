@@ -1,0 +1,120 @@
+/* CITIES INSIGHTS BLOCK */
+/* Block: cities-insights */
+.cities-insights {
+    /* Container for the entire section */
+}
+
+/* Element: cities-insights__list */
+.cities-insights__list {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+/* Element: cities-insights__item */
+.cities-insights__item {
+    width: 100%;
+}
+
+.cities-insights__item a {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Element: cities-insights__icon */
+.cities-insights__icon {
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--gunmetal);
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 10px;
+    text-align: center;
+}
+
+/* Element: cities-insights__title */
+.cities-insights__title {
+    font-size: 16px;
+    color: var(--gunmetal);
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Element: cities-insights__image */
+
+.cities-insights__prices {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Element: cities-insights__price */
+.cities-insights__price {
+    font-size: 18px;
+    color: var(--dark-space-blue);
+    font-weight: 400;
+    margin: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.cities-insights__price:hover {
+    text-decoration: underline;
+}
+
+.cities-insights__arrow {
+    display: none;
+}
+
+.cities-insights__price:hover .cities-insights__arrow {
+    display: inline-block;
+    text-decoration: underline;
+}
+
+/* Element: cities-insights__description */
+.cities-insights__description {
+    font-size: 14px;
+    color: var(--gunmetal);
+    font-weight: 600;
+    margin: 0;
+}
+
+.cities-insights__description span {
+    color: darkgreen;
+}
+
+.cities-insights__image-container {
+    position: relative;
+    height: 248px;
+    overflow: hidden; /* Ensures the overlay doesn't extend outside the image */
+}
+
+.cities-insights__image {
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distorting */
+    width: 100%;
+}
+
+.cities-insights__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px; /* Large font size for visibility */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for the overlay */
+}
+
+.cities-insights__overlay span {
+    text-align: center;
+}
+
+.cities-insights__image-container:hover .cities-insights__overlay {
+    opacity: 1; /* Make overlay visible on hover */
+}

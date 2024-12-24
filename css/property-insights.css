@@ -49,3 +49,13 @@
     line-height: 26px;
     font-weight: 400;
 }
+
+.property-insights__stats {
+    font-size: 14px;
+    color: var(--gunmetal);
+    font-weight: 600;
+}
+
+.property-insights__stats span {
+    color: darkgreen;
+}
