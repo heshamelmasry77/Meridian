@@ -19,32 +19,29 @@
 <body>
 <header>
     <div class="container">
-        <div class="navbar">
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
             <a href="index.html" class="navbar__logo">
                 <img src="assets/images/logo.svg" alt="Meridian News Logo">
             </a>
-            <img src="assets/images/burger-icon.svg" alt="Hamburger Icon" class="navbar__hamburger-icon">
+            <img src="assets/images/burger-icon.svg" alt="Open navigation menu" class="navbar__hamburger-icon" tabindex="0">
             <!--Desktop Nav-->
             <div class="navbar__desktop">
                 <ul class="navbar__menu">
                     <li class="nav__menu-item"><a href="index.html">Home</a></li>
                 </ul>
             </div>
-        </div>
-
+        </nav>
         <div class="mobile-nav">
             <div class="mobile-nav__menu-icon">
-                <img src="assets/images/close-icon.svg" alt="Close Icon" class="mobile-nav__close-icon">
+                <img src="assets/images/close-icon.svg" alt="Close navigation menu" class="mobile-nav__close-icon" tabindex="0">
             </div>
             <ul class="mobile-nav__menu">
                 <li class="nav__menu-item"><a href="index.html">Home</a></li>
             </ul>
         </div>
-
         <div class="mobile-nav__overlay"></div>
     </div>
 </header>
-
 <main>
     <div class="container hero-and-news">
         <!--PROPERTY INSIGHTS-->
@@ -91,7 +88,7 @@
         <hr/>
     </div>
 
-    <div class="container cities-insights" id="cities-container">
+    <div class="container cities-insights" id="cities-container" aria-live="polite">
     </div>
 </main>
 <script src="js/navbar.js"></script>
